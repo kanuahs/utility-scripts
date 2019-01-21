@@ -5,19 +5,21 @@ Run them at your own risk. These have been tested only on Ubuntu Mate 18.04
 
 ## List of scripts:
 ```
-time-notifier.sh : uses notifiy-send to print current time
-kubernetes
-|- helm-update.sh : installs/updates helm to latest stable & add bash completion
-|- k8s-update.sh : installs/updates kubectl to latest stable & add bash completion
-|- minikube-update.sh : installs/updates minikube to latest stable & add bash completion
-databases
-|- mongo
-|  |- README.md
-|  |- docker-compose.yaml
-|  |- connection-cmd.sh
-|- postgres
-|  |- README.md
-|  |- docker-compose.yaml
-|  |- connection-cmd.sh
-|  |- get_table_list.py
+.
+├── databases
+│   ├── mongo
+│   │   ├── connection-cmd.sh
+│   │   ├── docker-compose.yaml
+│   │   └── README.md
+│   └── postgres
+│       ├── connection-cmd.sh
+│       ├── docker-compose.yaml
+│       ├── get_table_list.py
+│       └── README.md
+├── kubernetes
+│   ├── helm-update.sh
+│   ├── k8s-update.sh
+│   └── minikube-update.sh
+└── time-notifier.sh
 ```
+
