@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mysql-db:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: DROPIT
+      MYSQL_DATABASE: test-db
+      MYSQL_USER: test-user
+      MYSQL_PASSWORD: example
+    volumes:
+      - mysql-datavolume:/var/lib/mysql
+
+volumes:
+  mysql-datavolume:
