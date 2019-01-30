@@ -7,4 +7,4 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 kubectl completion bash > kubectl_autocomplete \
  && sudo mv kubectl_autocomplete /etc/bash_completion.d/kubectl
 
-kubectl version
+kubectl version --client
