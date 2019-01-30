@@ -1,6 +1,7 @@
 # Installs latest release of kubernetes
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
- && sudo install kubectl /usr/local/bin/kubectl
+ && sudo install kubectl /usr/local/bin/kubectl \
+ && rm ./kubectl
 
 # Bash completion
 kubectl completion bash > kubectl_autocomplete \
