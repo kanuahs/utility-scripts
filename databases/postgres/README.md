@@ -1,15 +1,29 @@
 # Setup
-
-Install docker
+```
 docker-compose up
+```
+# Usage
+```
+bash connection-cmd.sh
+```
+To connect to database using the installed postgres cli
 
-# Connection
+# Cleanup & Deletion
 
-docker container exec -it <context>_postgres-db "/bin/sh"
-su postgres && psql
+```
+docker-compose down
+```
+Keeps data in the volume and reuses it the next time
+
+```
+docker-compose down --volumes
+```
+Removes the volume along with the data stored in the database.
+Database will reinitialize next time the container is started
+
 
 # Reference commands
-
+```
 $ sudo -u postgres createuser <username>
 //change user and create a new db user
 
@@ -28,3 +42,4 @@ postgres=# alter role <username> with valid until '9999-12-31';
 
 <connected_database>=# \c <other_database>
 //connect to another database
+```
